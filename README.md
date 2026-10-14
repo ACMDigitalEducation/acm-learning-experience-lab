@@ -70,3 +70,16 @@ Added a fourth, substantially different navigation approach: a large, responsive
 - Each participant sees 12 distinct activity targets (three per layout), with a randomised starting offset. Target difficulty is not formally equated; interpret raw speed comparisons cautiously.
 - Task instructions are visually prominent, and the page scrolls to the top when moving between tasks or screens.
 - Timing starts only when the participant starts a layout; restarting a task resets its timer.
+
+## Research dashboard
+
+A separate research dashboard is included at `/dashboard.html` (e.g. `https://YOUR-ORG.github.io/acm-learning-experience-lab/dashboard.html`).
+
+1. Open the Google Sheet and select the **Responses** tab.
+2. Choose **File → Download → Comma Separated Values (.csv)**. Download the active tab, not the empty Sheet1 tab.
+3. Open the dashboard and choose **Import results CSV**.
+4. Filter by device, exclude staff/test submissions by response ID, inspect charts, and export the summary CSV.
+
+The dashboard deliberately does **not** fetch the Google Sheet directly or store any imported records. It analyses the CSV locally in the browser, so the GitHub Pages site does not publish participant comments or research data. Do not share screenshots of identifiable free-text comments. The dashboard URL is public, but the data is not automatically available there.
+
+The dashboard expects the 16-column Responses schema created by the Apps Script endpoint, and complete submissions with 12 tasks across four navigation layouts. Re-export the CSV to refresh the analysis.
